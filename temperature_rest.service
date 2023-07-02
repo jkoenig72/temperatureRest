@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=fritz
 WorkingDirectory=/home/fritz/temperatureRest
-ExecStart=gunicorn -w 1 -b 0.0.0.0:5001 temperatureRest:temperatureRest
+ExecStart=gunicorn -w 1 -b 0.0.0.0:5001 temperatureRest:app
 Restart=always
 
 [Install]
