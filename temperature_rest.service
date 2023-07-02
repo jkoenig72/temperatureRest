@@ -1,0 +1,12 @@
+[Unit]
+Description=GPIO Rest Service
+After=network.target
+
+[Service]
+User=fritz
+WorkingDirectory=/home/fritz/temperatureRest
+ExecStart=gunicorn -w 1 -b 0.0.0.0:9091 temperatureRest:temperatureRest
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
